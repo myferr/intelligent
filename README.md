@@ -1,15 +1,17 @@
 # intelligent
 
 ![license](https://img.shields.io/npm/l/intelligent) ![latest](https://img.shields.io/npm/v/intelligent)
+
 A library to simplify the usage of AI models.
 
 - [Introduction](#Introduction)
 - [Configuration](#Configuration)
 
 ✨ **Supported services**:
-
 - Gemini
 - OpenAI
+- Claude (experimental)
+- Ollama
 
 # Introduction
 
@@ -35,10 +37,12 @@ const ai = new GeminiService("YOUR-API-KEY");
 
 The model parameter has an already set default value.
 
-| Service | Default value      |
-| ------- | ------------------ |
-| Gemini  | `gemini-1.5-flash` |
-| OpenAI  | `gpt-4o-mini`      |
+| Service | Default value                |
+| ------- | ---------------------------- |
+| Gemini  | `gemini-1.5-flash`           |
+| OpenAI  | `gpt-4o-mini`                |
+| Claude  | `claude-3-5-sonnet-20241022` |
+| Ollama  | `llava`                      |
 
 You can customize the `model` parameter using the code below
 
@@ -48,12 +52,12 @@ const ai = new GeminiService("YOUR-API-KEY", "PROVIDE-MODEL-HERE");
 
 > Use the imported service not just `GeminiService`!
 
-#### Example
+# Example
 
 ```js
 const { GeminiService } = require("intelligent");
 
-const ai = new GeminiService("AIzaSyDhn5MGPzks2QSJFAynSL0lb1QoXdA24m0"); // not a valid api key
+const ai = new GeminiService("API-KEY");
 
 ai.response("Why is the sky blue?").then((res) => {
   console.log(res);
@@ -65,10 +69,7 @@ ai.response("Why is the sky blue?").then((res) => {
 ```js
 const { GeminiService } = require("intelligent");
 
-const ai = new GeminiService(
-  "AIzaSyDhn5MGPzks2QSJFAynSL0lb1QoXdA24m0", // not a valid api key
-  "gemini-1.5-pro"
-);
+const ai = new GeminiService("API-KEY", "gemini-1.5-pro");
 
 ai.response("Why is the sky blue?").then((res) => {
   console.log(res);
