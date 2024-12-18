@@ -9,11 +9,10 @@ class OllamaService {
     const response = await ollama.generate({
       model: this.model,
       prompt: prompt,
-      stream: true,
+      stream: false,
     });
-    for await (const part of response) {
-      process.stdout.write(part.response);
-    }
+
+    return response.response;
   }
 }
 
