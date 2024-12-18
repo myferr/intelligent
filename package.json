@@ -1,0 +1,29 @@
+{
+  "name": "intelligent",
+  "version": "1.0.2",
+  "description": "A library to simplify the usage of AI models.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myferr/intelligent.git"
+  },
+  "keywords": [
+    "ai",
+    "util",
+    "library"
+  ],
+  "author": "myfer <contactme.myfer@protonmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/myferr/intelligent/issues"
+  },
+  "homepage": "https://github.com/myferr/intelligent#readme",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "openai": "^4.77.0"
+  }
+}
