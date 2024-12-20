@@ -8,10 +8,12 @@ A library to simplify the usage of AI models.
 - [Configuration](#Configuration)
 
 ✨ **Supported services**:
+
 - Gemini
 - OpenAI
-- Claude (experimental)
+- Claude
 - Ollama
+- HuggingFace
 
 # Introduction
 
@@ -37,12 +39,13 @@ const ai = new GeminiService("YOUR-API-KEY");
 
 The model parameter has an already set default value.
 
-| Service | Default value                |
-| ------- | ---------------------------- |
-| Gemini  | `gemini-1.5-flash`           |
-| OpenAI  | `gpt-4o-mini`                |
-| Claude  | `claude-3-5-sonnet-20241022` |
-| Ollama  | `llava`                      |
+| Service     | Default value                | Module name          |
+| ----------- | ---------------------------- | -------------------- |
+| Gemini      | `gemini-1.5-flash`           | `GeminiService`      |
+| OpenAI      | `gpt-4o-mini`                | `OpenAIService`      |
+| Claude      | `claude-3-5-sonnet-20241022` | `ClaudeService`      |
+| Ollama      | `llava`                      | `OllamaService`      |
+| HuggingFace | `gpt2`                       | `HuggingFaceService` |
 
 You can customize the `model` parameter using the code below
 

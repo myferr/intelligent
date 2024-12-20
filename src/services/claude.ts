@@ -33,7 +33,7 @@ class ClaudeService {
           },
         ],
       });
-      console.log(msg);
+      return msg;
     }
   }
 }
