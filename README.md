@@ -14,6 +14,7 @@ A library to simplify the usage of AI models.
 - Claude
 - Ollama
 - HuggingFace
+- Grok
 
 # Introduction
 
@@ -46,6 +47,7 @@ The model parameter has an already set default value.
 | Claude      | `claude-3-5-sonnet-20241022` | `ClaudeService`      |
 | Ollama      | `llava`                      | `OllamaService`      |
 | HuggingFace | `gpt2`                       | `HuggingFaceService` |
+| Grok        | `grok-2-1212`                | `GrokService`        |
 
 You can customize the `model` parameter using the code below
 
