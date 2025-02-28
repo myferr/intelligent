@@ -1,3 +1,4 @@
+> [DeepSeek R-1](https://ollama.com/library/deepseek-r1) is supported via Ollama.
 # intelligent
 
 ![license](https://img.shields.io/npm/l/intelligent) ![latest](https://img.shields.io/npm/v/intelligent)
